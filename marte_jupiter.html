@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calcular Peso en un lugar donde pesas menos</title>
+  </head>
+  <body>
+    <h1>Tu peso en otro planeta</h1>
+    <p> En la tierra pesas distinto que en Marte o Jupiter</p>
+    <script type="text/javascript">
+
+
+    var g_tierra = 9.8;
+    var g_marte = 3.7;
+    var g_jupiter = 24.8;
+    var peso= parseFloat(prompt("¿Cual es tu peso?"));
+    var planeta =prompt("Elige tu Planeta:\n1.Es Marte \n2.Es Jupiter");
+    var peso_final=0;
+    var planeta_nombre="";
+    if(planeta=="1"){
+        peso_final = peso*g_marte/g_tierra;
+
+        planeta_nombre="Marte";
+
+    }else if(planeta=="2"){
+        peso_final = peso*g_jupiter/g_tierra;
+
+        planeta_nombre="Jupiter";
+
+    }else {
+      peso_final= 1000000;
+      planeta_nombre="Kripton"
+    }
+
+    document.write("Tu peso en " + planeta_nombre + " es:<strong>" +
+      + peso_final.toFixed(2) + " Kilos.</strong>");
+
+    </script>
+  </body>
+</html>
